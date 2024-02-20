@@ -1,17 +1,16 @@
+const getProducts = require('./controlers/product')
+
 const rotas = (app, prisma) =>{
 
-    app.get('/', function(request, reply){
-        async function test(){
-            const categoria1 = await prisma.categoria.create({
-                data: {
-                    nome_categoria: 'Pefumes',
-                    descricao_categoria: 'variados'
-                }
-            })
-        console.log(categoria1)
-        }
-        test()
-        reply.send({'hello':'world 2'})
+    app.get('/products', async function(request, reply){
+        const values = await getProducts(prisma)
+        reply.send(values)
+    })
+
+    app.get('/products/:id', async function(request, reply){
+        const id = request.params.id
+        const values = await getProducts(prisma, id)
+        reply.send(values)
     })
 
 
