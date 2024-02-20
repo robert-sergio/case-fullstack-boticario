@@ -6,11 +6,11 @@ import { useContext } from 'react'
 import { CartContext } from '@/contexts/cartcontext'
 
 export default function Cardlist() {
-  const { listProduct, setListProduct }= useContext(CartContext)
+  const [ listProduct, setListProduct ] = useState([])
+  const { cartList, setCartList, totalCart, handleCartList } = useContext(CartContext)
 
   useEffect( ()=>{
     const service = new ProductService()
-
     async function getProductList(){
       const {data} = await service.getProducts()
       setListProduct(data)
@@ -23,7 +23,7 @@ export default function Cardlist() {
       {
         listProduct.map((productItem, index)=>{
           return(
-            <Card key={index} product={productItem} />
+            <Card key={index} product={productItem} handleCartList={handleCartList} />
           )})
       }
     </div>
