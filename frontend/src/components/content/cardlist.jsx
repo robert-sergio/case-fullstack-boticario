@@ -2,10 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import Card from './card'
 import {ProductService} from '../../services/products'
-import Product from '../product/product'
+import { useContext } from 'react'
+import { CartContext } from '@/data/contexts/cartcontext'
 
 export default function Cardlist() {
-  const [ listProduct, setListProduct ] = useState([])
+  const { listProduct, setListProduct }= useContext(CartContext)
 
   useEffect( ()=>{
     const service = new ProductService()
