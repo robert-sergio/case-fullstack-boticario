@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model categoria {
+  categoria_id Int @id @default(autoincrement())
+  nome_categoria String? @db.VarChar(20)
+  descricao_categoria String? @db.VarChar(200)
+  produtos produto[]
+}
+
+model cliente {
+  cliente_id Int @id @default(autoincrement())
+  email String? @db.VarChar(50)
+  username String? @db.VarChar(15)
+  senha String? @db.VarChar(20)
+  nome String? @db.VarChar(200)
+  cpf String @unique @db.VarChar(11)
+  telefone String @db.VarChar(11)
+  data_nascimento DateTime?
+  endereco_id Int
+  pedidos pedido[]
+}
+
+model endereco {
+  endereco_id Int @id @default(autoincrement())
+  cep String? @db.VarChar(9)
+  rua String? @db.VarChar(100)
+  bairro String? @db.VarChar(30)
+  cidade String? @db.VarChar(30)
+  numero String? @db.VarChar(10)
+  complemento String? @db.VarChar(100)
+  uf String? @db.VarChar(2)
+}
+
+model produto {
+  produto_id Int @id @default(autoincrement())
+  nome_produto String @db.VarChar(50)
+  descricao_produto String @db.VarChar(200)
+  preco_produto Decimal
+  qtd_estoque Int
+  data_cadastro_produto DateTime @default(now())
+  categoria_id Int @unique
+  categoria categoria @relation(fields: [categoria_id], references: [categoria_id])
+  imagem String
+  produtos_pedido produto_pedido[]
+}
+
+model pedido {
+  pedido_id Int @id @default(autoincrement())
+  numero_pedido Int?
+  valor_total_pedido Decimal
+  data_pedido DateTime @default(now())
+  status Boolean?
+  cliente_id Int @unique 
+  cliente cliente @relation(fields: [cliente_id], references: [cliente_id])
+  produto_pedido produto_pedido[]
+}
+
+model produto_pedido {
+  produto_pedido_id Int @id @default(autoincrement())
+  qtd_produto_pedido Int?
+  preco_produto_pedido Decimal?
+  produto_id Int @unique
+  produto produto @relation(fields: [produto_id], references: [produto_id])
+  pedido_id Int @unique
+  pedido pedido @relation(fields: [pedido_id], references: [pedido_id])
+}
