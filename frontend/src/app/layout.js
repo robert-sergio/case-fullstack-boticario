@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { CartProvider } from "@/data/contexts/cartcontext";
+import { CartProvider } from "@/contexts/cartcontext";
 
 const inter = Inter({ subsets: ["latin"] });
 
