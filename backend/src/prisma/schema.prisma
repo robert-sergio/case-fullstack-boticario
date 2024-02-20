@@ -27,6 +27,7 @@ model cliente {
   telefone String @db.VarChar(11)
   data_nascimento DateTime?
   endereco_id Int
+  endereco endereco @relation(fields: [endereco_id], references: [endereco_id])
   pedidos pedido[]
 }
 
@@ -39,6 +40,7 @@ model endereco {
   numero String? @db.VarChar(10)
   complemento String? @db.VarChar(100)
   uf String? @db.VarChar(2)
+  clientes cliente[]
 }
 
 model produto {
@@ -51,7 +53,7 @@ model produto {
   categoria_id Int @unique
   categoria categoria @relation(fields: [categoria_id], references: [categoria_id])
   imagem String
-  produtos_pedido produto_pedido[]
+  produtos_pedidos produto_pedido[]
 }
 
 model pedido {
@@ -62,7 +64,7 @@ model pedido {
   status Boolean?
   cliente_id Int @unique 
   cliente cliente @relation(fields: [cliente_id], references: [cliente_id])
-  produto_pedido produto_pedido[]
+  produtos_pedidos produto_pedido[]
 }
 
 model produto_pedido {
