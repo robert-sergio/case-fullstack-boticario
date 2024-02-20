@@ -8,6 +8,12 @@ const app = fastify({
   logger: false
 })
 
+app.register(require('@fastify/cors'), {
+  origin:'*',
+  methods:['*'],
+  
+})
+
 rotas(app, prisma)
 
 app.listen({ port: 3001 }, function (err, address) {
