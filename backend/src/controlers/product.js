@@ -5,6 +5,9 @@ async function getProducts(prisma, id){
         {
             where: {
                 produto_id: Number(id)
+            },
+            include: {
+                categoria: true
             }
         }:
         {}
