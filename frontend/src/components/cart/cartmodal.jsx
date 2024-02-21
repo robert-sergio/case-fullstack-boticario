@@ -22,7 +22,10 @@ export default function CartModal() {
             <span>{totalItens} Itens</span>
             <span>R$ {totalCart}</span>
           </div>
-          <Link href='/checkout' className='bg-white border rounded-md border-green-950 p-4 font-semibold text-xl'>
+          <Link 
+            href='/checkout' 
+            className='bg-white border rounded-md border-green-950 p-4 font-semibold text-xl'
+            onClick={()=>handleCartPreview()}>
             Seguir para a Compra
           </Link>
         </div>
