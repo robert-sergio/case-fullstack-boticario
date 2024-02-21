@@ -25,7 +25,6 @@ export default function User() {
     const service = new UserService()
     async function getUserData(){
       const {data} = await service.userData(cliente_id, token)
-      console.log(data[0])
       setValues(data[0])
     }
     getUserData()

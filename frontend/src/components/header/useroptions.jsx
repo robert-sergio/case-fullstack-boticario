@@ -13,6 +13,7 @@ export default function UserOptions() {
         <>
           <div>Olá, {clientData.nome}</div>
           <Link href={'/user'}>Minha Conta</Link>
+          <Link href={'/orders'}>Meus pedidos</Link>
           <button onClick={()=> handleLogout()}>Logout</button>
         </>:
           <Link href={'/login'}>Realizar Login</Link>

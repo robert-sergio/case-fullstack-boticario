@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 export default function CardProductSm({item}) {
   const {produto, qtd_produto_pedido } = item
-  console.log(produto.preco)
   return (
     <div className='border border-slate-400 w-48 rounded-md p-1 flex flex-col justify-evenly items-center gap-1 shadow-md'>
       <div className='flex justify-center items-center'>

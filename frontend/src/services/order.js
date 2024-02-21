@@ -13,7 +13,6 @@ export class OrderService{
             'x-api-key': token
             }
         }
-        console.log(order)
         return axios.post(`${this.baseUrl}/order`, order, config)
     }
 
@@ -24,7 +23,7 @@ export class OrderService{
             'x-api-key': token
             }
         }
-        return axios.get(`${this.baseUrl}/orders/${cliente_id}`, config)
+        return axios.get(`${this.baseUrl}/order/${cliente_id}`, config)
     }
 
     cancelOrder(pedido_id, token){

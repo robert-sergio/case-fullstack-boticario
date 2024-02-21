@@ -74,5 +74,5 @@ model produto_pedido {
   produto_id Int @unique
   produto produto @relation(fields: [produto_id], references: [produto_id])
   pedido_id Int @unique
-  pedido pedido @relation(fields: [pedido_id], references: [pedido_id])
+  pedido pedido @relation(fields: [pedido_id], references: [pedido_id], onDelete: Cascade)
 }
