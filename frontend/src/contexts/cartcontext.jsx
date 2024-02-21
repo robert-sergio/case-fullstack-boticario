@@ -34,7 +34,6 @@ export function CartProvider(props){
     }
 
     function handleDeleteCartItem(id){
-        console.log(id)
         const outrosItens = cartList.filter((item) => item.produto.produto_id !== id)
         setCartList([...outrosItens])
     }

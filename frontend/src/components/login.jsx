@@ -1,15 +1,26 @@
 'use client'
 import React, { useState } from 'react'
 import { UserService } from '@/services/user'
+import { useContext } from 'react'
+import { LoginContext } from '@/contexts/logincontext'
+import { useRouter } from 'next/navigation'
 
 export default function Login() {
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
+  const { setClientData } = useContext(LoginContext)
+  const router = useRouter()
 
   async function handleLogin(event){
     event.preventDefault()
     const service = new UserService()
-    service.loginRequest(email, pass)
+    const response = await service.loginRequest(email, pass)
+    if (response.data.message ==='"Email or Password does not match"'){
+      // colocar mensagem de erro
+      return
+    }
+    setClientData(response.data)
+    router.push('/')
   }
 
   return (

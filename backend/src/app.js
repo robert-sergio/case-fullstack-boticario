@@ -6,7 +6,7 @@ const auth = require('./middlewares/auth')
 const prisma = new PrismaClient()
 
 const app = fastify({
-  logger: true
+  logger: false
 })
 
 app.register(require('@fastify/cors'), {
@@ -14,8 +14,6 @@ app.register(require('@fastify/cors'), {
   methods:['*'],
   
 })
-app.addHook('preHandler', auth)
-
 rotas(app, prisma)
 
 app.listen({ port: 3001 }, function (err, address) {

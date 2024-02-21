@@ -14,10 +14,10 @@ export class ProductService {
     }
 
     getProducts(){
-        return axios.get(`${this.baseUrl}/products`, this.config)
+        return axios.get(`${this.baseUrl}/products`)
     }
 
     async getProductById(id){
-        return await axios.get(`${this.baseUrl}/products/${id}`, this.config)
+        return await axios.get(`${this.baseUrl}/products/${id}`)
     }
 }
