@@ -6,7 +6,7 @@ const auth = require('./middlewares/auth')
 const prisma = new PrismaClient()
 
 const app = fastify({
-  logger: false
+  logger: true
 })
 
 app.register(require('@fastify/cors'), {

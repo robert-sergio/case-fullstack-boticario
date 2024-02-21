@@ -1,3 +1,5 @@
+const jwt = require('jsonwebtoken')
+
 async function Login(prisma, data){
 
     const response = await prisma.cliente.findMany(
@@ -5,14 +7,18 @@ async function Login(prisma, data){
             where: {
                 email: data.email,
                 senha: data.senha
-            },
-            include:{
-                endereco:true
             }
         }
     )
-    console.log(response)
-    return response
+    if(response.length === 0)
+        return {message:"Email or Password does not match"}
+
+    const jwtToken = jwt.sign(
+        {id: response.cliente_id, email:data.email}, 
+        process.env.JWT_SECRET
+    )
+
+    return {message:"Welcome Back", token:jwtToken}
 }
 
 
