@@ -1,6 +1,7 @@
 const getProducts = require('./controlers/product')
 const Login = require('./controlers/login')
 const DadosUsuario = require('./controlers/client')
+const orders = require('./controlers/orders')
 const auth = require('./middlewares/auth')
 
 const rotas = (app, prisma) =>{
@@ -25,6 +26,18 @@ const rotas = (app, prisma) =>{
     app.get('/user/:cliente_id', {'preHandler':auth}, async function(request, reply){
         const cliente_id = request.params.cliente_id
         const values = await DadosUsuario(prisma, cliente_id)
+        reply.send(values)
+    })
+
+    app.post('/order', {'preHandler':auth}, async function(request, reply){
+        const data = request.body
+        const values = await orders.createOrder(prisma, data)
+        reply.send(values)
+    })
+
+    app.get('/order/:cliente_id', {'preHandler':auth}, async function(request, reply){
+        const cliente_id = request.params.cliente_id
+        const values = await orders.getOrders(prisma, cliente_id)
         reply.send(values)
     })
 

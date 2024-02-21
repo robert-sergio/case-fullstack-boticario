@@ -21,7 +21,7 @@ export function LoginProvider(props){
     }
 
     return(
-        <LoginContext.Provider value={{clientData, setClientData, handleLogout}}>
+        <LoginContext.Provider value={{clientData, setClientData, handleLogout }}>
             {props.children}
         </LoginContext.Provider>
     )
