@@ -5,13 +5,13 @@ import { LoginContext } from '@/contexts/logincontext'
 import Link from 'next/link'
 
 export default function UserOptions() {
-  const {clientData, handleLogout} = useContext(LoginContext)
+  const {nome, handleLogout} = useContext(LoginContext)
   return (
     <div className='flex gap-4'>
       {
-        clientData.nome?
+        nome?
         <>
-          <div>Olá, {clientData.nome}</div>
+          <div>Olá, {nome}</div>
           <Link href={'/user'}>Minha Conta</Link>
           <Link href={'/orders'}>Meus pedidos</Link>
           <button onClick={()=> handleLogout()}>Logout</button>

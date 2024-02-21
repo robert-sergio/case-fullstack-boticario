@@ -6,7 +6,7 @@ import CartModal from '@/components/cart/cartmodal'
 
 export default function page() {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col items-center">
         <Header />
         <CartModal />
         <Content>

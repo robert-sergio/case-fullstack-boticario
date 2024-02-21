@@ -9,8 +9,7 @@ import { UserService } from '@/services/user'
 import { useRouter } from 'next/navigation'
 
 export default function User() {
-  const {clientData} = useContext(LoginContext)
-  const {cliente_id, token} = clientData
+  const {cliente_id, token} = useContext(LoginContext)
   const [values, setValues] = useState({})
   const router = useRouter()
 

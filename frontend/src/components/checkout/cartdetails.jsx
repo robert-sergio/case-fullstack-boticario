@@ -11,8 +11,7 @@ export default function CartDetails() {
   const [values, setValues] = useState({})
   const router = useRouter()
 
-  const {clientData} = useContext(LoginContext)
-  const {cliente_id, token} = clientData
+  const {cliente_id, token} = useContext(LoginContext)
 
   const {totalCart, cartList } = useContext(CartContext)
 

@@ -5,7 +5,7 @@ export const LoginContext = createContext({})
 
 export function LoginProvider(props){
     const [clientData, setClientData] = useState({message:'', cliente_id:'', nome:'', token:''})
-    const {cliente_id, token} = clientData
+    const {cliente_id, token, message, nome} = clientData
     
     useEffect(() => {
         const data = window.localStorage.getItem('CLIENTE_DATA');
@@ -22,7 +22,7 @@ export function LoginProvider(props){
     }
 
     return(
-        <LoginContext.Provider value={{clientData, setClientData, handleLogout, cliente_id, token }}>
+        <LoginContext.Provider value={{clientData, setClientData, handleLogout, cliente_id, token, message, nome }}>
             {props.children}
         </LoginContext.Provider>
     )

@@ -9,8 +9,7 @@ import { useRouter } from 'next/navigation'
 
 export default function CartModal() {
   const { cartPreview, handleCartPreview, totalCart, totalItens } = useContext(CartContext)
-  const {clientData} = useContext(LoginContext)
-  const {message} = clientData
+  const {message} = useContext(LoginContext)
   const router = useRouter()
 
   function handleCheckout(){

@@ -15,14 +15,18 @@ export default function Login() {
   async function handleLogin(event){
     event.preventDefault()
     const service = new UserService()
-    const response = await service.loginRequest(email, pass)
-    if (response.data.message ==='Email or Password does not match'){
-      setError(true)
-    } else{
-      setError(false)
-      setClientData(response.data)
+    console.log('response')
+    await service.loginRequest(email, pass)
+    .then((res)=>{
+      console.log('S')
+      setClientData(res.data)
+      setError(false)   
       router.push('/')
-    }
+    })
+    .catch((err)=>{
+      console.log('S')
+      setError(true)
+    })
   }
 
   return (
