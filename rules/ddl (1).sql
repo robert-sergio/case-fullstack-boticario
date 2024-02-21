@@ -111,5 +111,5 @@ CREATE TABLE public.produto_pedido (
 
 -- public.produto_pedido foreign keys
 
-ALTER TABLE public.produto_pedido ADD CONSTRAINT produto_pedido_pedido_id_fkey FOREIGN KEY (pedido_id) REFERENCES public.pedido(pedido_id);
+--ALTER TABLE public.produto_pedido ADD CONSTRAINT produto_pedido_pedido_id_fkey FOREIGN KEY (pedido_id) REFERENCES public.pedido(pedido_id);
 ALTER TABLE public.produto_pedido ADD CONSTRAINT produto_pedido_produto_id_fkey FOREIGN KEY (produto_id) REFERENCES public.produto(produto_id);

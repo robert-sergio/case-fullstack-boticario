@@ -1,18 +1,23 @@
 require('dotenv').config()
+const prisma = require('../prisma')
 
-async function DadosUsuario(prisma, cliente_id){
-
-    const response = await prisma.cliente.findMany(
-        {
-            where: {
-                cliente_id: Number(cliente_id)
-            },
-            include:{
-                endereco: true
+const DadosUsuario = async (request, reply) =>{
+    try {
+        const response = await prisma.cliente.findMany(
+            {
+                where: {
+                    cliente_id: Number(request.params.cliente_id)
+                },
+                include:{
+                    endereco: true
+                }
             }
-        }
-    )
-    return response
+        )
+        reply.status(200).reply(response)
+    } catch (err){
+        reply.status(500).send(err)
+    }
+
 }
 
 
