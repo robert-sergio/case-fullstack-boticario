@@ -1,17 +1,21 @@
 import axios from "axios";
 
-const baseUrl = 'http://localhost:3001'
-
 export class UserService{
 
-    loginRequest(email, senha){
-        const config = {
-            headers: {
-                'Content-Type': 'application/json'
+    constructor(){
+        this.baseUrl = 'http://localhost:3001'
+        this.myKey = process.env.NEXT_PUBLIC_API_KEY
+        this.config = {
+            headers:{
+            'Content-Type': 'application/json',
+            'x-api-key': this.myKey
             }
         }
+    }
+
+    loginRequest(email, senha){
         const data = {email, senha}
-        return axios.post(`${baseUrl}/login`, data, config)
+        return axios.post(`${this.baseUrl}/login`, data, this.config)
     }
 
     userData(user){
