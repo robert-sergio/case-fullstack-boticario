@@ -41,16 +41,16 @@ const rotas = (app, prisma) =>{
         reply.send(values)
     })
 
-    app.put('/order/:cliente_id', {'preHandler':auth}, async function(request, reply){
-        const cliente_id = request.params.cliente_id
+    app.put('/order/:pedido_id', {'preHandler':auth}, async function(request, reply){
+        const pedido_id = request.params.pedido_id
         const data = request.body
-        const values = await orders.cancelOrder(prisma, cliente_id, data)
+        const values = await orders.cancelOrder(prisma, pedido_id, data)
         reply.send(values)
     })
 
-    app.delete('/order/:cliente_id', {'preHandler':auth}, async function(request, reply){
-        const cliente_id = request.params.cliente_id
-        const values = await orders.deleteOrder(prisma, cliente_id)
+    app.delete('/order/:pedido_id', {'preHandler':auth}, async function(request, reply){
+        const pedido_id = request.params.pedido_id
+        const values = await orders.deleteOrder(prisma, pedido_id)
         reply.send(values)
     })
 

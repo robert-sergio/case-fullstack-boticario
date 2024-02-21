@@ -17,22 +17,23 @@ class orders{
         return products
     }
 
-    async cancelOrder(prisma, cliente_id, data){
+    async cancelOrder(prisma, pedido_id, data){
+        const status = data.status
         const result = await prisma.pedido.update({
             where:{
-                cliente_id: Number(cliente_id)
+                pedido_id: Number(pedido_id)
             },
             data:{
-                data
+                status: status
             }
         })
         return result
     }
 
-    async deleteOrder(prisma, cliente_id){
+    async deleteOrder(prisma, pedido_id){
         const result = await prisma.pedido.delete({
             where:{
-                cliente_id: Number(cliente_id)
+                pedido_id: Number(pedido_id)
             }
         })
         return result
