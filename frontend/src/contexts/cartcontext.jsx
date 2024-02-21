@@ -7,6 +7,8 @@ export function CartProvider(props){
     const [ cartList, setCartList ] = useState([])
     const [ totalCart, setTotalCart ] = useState(0)
     const [ totalItens, setTotalItens ] = useState(0)
+    const [ cartPreview, setCartPreview ] = useState(false)
+
 
     useEffect(()=>{
         const tot = cartList.reduce( ( sum , cur ) => sum + Number(cur.produto.preco_produto)*cur.qtd_produto_pedido , 0)
@@ -16,14 +18,29 @@ export function CartProvider(props){
         setTotalItens(itens)
     },[cartList])
 
-    function handleCartList(produto, operation='', qty=1){
+    function handleCartList(produto, operation=''){
         const itemAtual = cartList.find((item) => item.produto.produto_id === produto.produto_id) ?? { qtd_produto_pedido: 0, produto }
         const novoItem = operation === 'add'?
-            { ...itemAtual, qtd_produto_pedido: itemAtual.qtd_produto_pedido + qty } :
-            { ...itemAtual, qtd_produto_pedido: itemAtual.qtd_produto_pedido - qty }
+            { ...itemAtual, qtd_produto_pedido: itemAtual.qtd_produto_pedido + 1 } :
+            { ...itemAtual, qtd_produto_pedido: itemAtual.qtd_produto_pedido - 1 }
+        
+        if (novoItem.qtd_produto_pedido === 0){
+            handleDeleteCartItem(novoItem.produto.produto_id)
+            return
+        }
 
         const outrosItens = cartList.filter((item) => item.produto.produto_id !== produto.produto_id)
         setCartList([...outrosItens, novoItem])
+    }
+
+    function handleDeleteCartItem(id){
+        console.log(id)
+        const outrosItens = cartList.filter((item) => item.produto.produto_id !== id)
+        setCartList([...outrosItens])
+    }
+    
+    function handleCartPreview(){
+        setCartPreview(!cartPreview)
     }
 
     // useEffect(() => {
@@ -36,7 +53,7 @@ export function CartProvider(props){
     // }, [cartList]);
 
     return(
-        <CartContext.Provider value={{ cartList, setCartList, totalCart, totalItens, handleCartList }}>
+        <CartContext.Provider value={{ cartList, setCartList, totalCart, totalItens, handleCartList, cartPreview, handleCartPreview, handleDeleteCartItem }}>
             {props.children}
         </CartContext.Provider>
     )
