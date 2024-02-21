@@ -1,5 +1,5 @@
 require('dotenv').config()
-const prisma = require('../prisma')
+const prisma = require('../middlewares/prisma')
 
 const Login = async (request, reply) =>{
     try {        

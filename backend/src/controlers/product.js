@@ -1,4 +1,4 @@
-const prisma = require("../prisma")
+const prisma = require("../middlewares/prisma")
 
 const getProducts = async (request, reply) =>{
   try {
