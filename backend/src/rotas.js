@@ -4,7 +4,7 @@ const DadosUsuario = require('./controlers/client')
 const orders = require('./controlers/orders')
 const auth = require('./middlewares/auth')
 
-function routes(fastify){
+async function routes(fastify){
     fastify.get('/products', getProducts)
     fastify.get('/products/:id', getProducts)
     fastify.post('/login', Login)
