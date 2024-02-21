@@ -41,7 +41,7 @@ class orders{
                 }
             })
             reply.status(201).send(result)
-        } catch {
+        } catch (err) {
             reply.status(500).send(err)
         }
     }

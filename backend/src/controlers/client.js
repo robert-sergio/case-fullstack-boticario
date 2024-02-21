@@ -13,7 +13,7 @@ const DadosUsuario = async (request, reply) =>{
                 }
             }
         )
-        reply.status(200).reply(response)
+        reply.status(200).send(response)
     } catch (err){
         reply.status(500).send(err)
     }
