@@ -18,9 +18,10 @@ export default function User() {
     if(cliente_id ===''){
       router.push('/login')
     }
-  },[clientData])
+  },[])
 
   useEffect(()=>{
+    if(token ==='') return
     const service = new UserService()
     async function getUserData(){
       const {data} = await service.userData(cliente_id, token)

@@ -13,10 +13,15 @@ export function LoginProvider(props){
 
     useEffect(() => {
         window.localStorage.setItem('CLIENTE_DATA', JSON.stringify(clientData));
-      }, [clientData]);
+    }, []);
+
+    function handleLogout(){
+        setClientData({message:'', cliente_id:'', nome:'', token:''})
+        window.localStorage.setItem('CLIENTE_DATA', JSON.stringify({message:'', cliente_id:'', nome:'', token:''}));
+    }
 
     return(
-        <LoginContext.Provider value={{clientData, setClientData}}>
+        <LoginContext.Provider value={{clientData, setClientData, handleLogout}}>
             {props.children}
         </LoginContext.Provider>
     )

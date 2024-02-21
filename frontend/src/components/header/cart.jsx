@@ -8,14 +8,14 @@ export default function Cart() {
   const { totalItens, totalCart, handleCartPreview} = useContext(CartContext)
 
   return (
-    <div className='flex flex-col justify-center items-center gap-1'>
+    <div className='flex justify-center items-center gap-4'>
+        <span>{totalItens} itens no valor de R$ {totalCart}</span>
         <button 
           className='flex gap-8'
           onClick={()=> handleCartPreview()}
         >
           Ver Carrinho <IconShoppingCart />
         </button>
-        <span>{totalItens} itens no valor de R$ {totalCart}</span>
     </div>
   )
 }
