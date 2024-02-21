@@ -7,7 +7,7 @@ values(
 	200,
 	CURRENT_DATE,
 	1,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B49031/20890d6e-9ec1-4cf4-a1eb-b5a7a4cd9638-malbec-colonia-club-100ml-v3-b49031-conceito.jpg'
+	'/malbec.webp'
 ),(
 	'Malbec Vert',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -15,7 +15,7 @@ values(
 	200,
 	CURRENT_DATE,
 	1,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B49031/20890d6e-9ec1-4cf4-a1eb-b5a7a4cd9638-malbec-colonia-club-100ml-v3-b49031-conceito.jpg'
+	'/malbec.webp'
 ),(
 	'Malbec Magnetic',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -23,7 +23,7 @@ values(
 	200,
 	CURRENT_DATE,
 	1,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B49031/20890d6e-9ec1-4cf4-a1eb-b5a7a4cd9638-malbec-colonia-club-100ml-v3-b49031-conceito.jpg'
+	'/malbec.webp'
 ),(
 	'Malbec Bleu',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -31,7 +31,7 @@ values(
 	200,
 	CURRENT_DATE,
 	1,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B49031/20890d6e-9ec1-4cf4-a1eb-b5a7a4cd9638-malbec-colonia-club-100ml-v3-b49031-conceito.jpg'
+	'/malbec.webp'
 ),(
 	'Malbec Intense',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -39,7 +39,7 @@ values(
 	200,
 	CURRENT_DATE,
 	1,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B49031/20890d6e-9ec1-4cf4-a1eb-b5a7a4cd9638-malbec-colonia-club-100ml-v3-b49031-conceito.jpg'
+	'/malbec.webp'
 ),(
 	'Malbec Gold',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -47,7 +47,7 @@ values(
 	200,
 	CURRENT_DATE,
 	1,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B49031/20890d6e-9ec1-4cf4-a1eb-b5a7a4cd9638-malbec-colonia-club-100ml-v3-b49031-conceito.jpg'
+	'/malbec.webp'
 ),(
 	'Malbec Ultra Bleu',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -55,7 +55,7 @@ values(
 	200,
 	CURRENT_DATE,
 	1,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B49031/20890d6e-9ec1-4cf4-a1eb-b5a7a4cd9638-malbec-colonia-club-100ml-v3-b49031-conceito.jpg'
+	'/malbec.webp'
 ),(
 	'Malbec Sport',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -63,7 +63,7 @@ values(
 	200,
 	CURRENT_DATE,
 	1,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B49031/20890d6e-9ec1-4cf4-a1eb-b5a7a4cd9638-malbec-colonia-club-100ml-v3-b49031-conceito.jpg'
+	'/malbec.webp'
 ),(
 	'Make B',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -71,7 +71,7 @@ values(
 	200,
 	CURRENT_DATE,
 	2,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B82448/batom_red_velvet.jpg'
+	'/batom.webp'
 ),(
 	'Make B Roxo',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -79,7 +79,7 @@ values(
 	200,
 	CURRENT_DATE,
 	2,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B82448/batom_red_velvet.jpg'
+	'/batom.webp'
 ),(
 	'Make B Violeta',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -87,7 +87,7 @@ values(
 	200,
 	CURRENT_DATE,
 	2,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B82448/batom_red_velvet.jpg'
+	'/batom.webp'
 ),(
 	'Make B Rosé',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -95,7 +95,7 @@ values(
 	200,
 	CURRENT_DATE,
 	2,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B82448/batom_red_velvet.jpg'
+	'/batom.webp'
 ),(
 	'Make B Champagne',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -103,7 +103,7 @@ values(
 	200,
 	CURRENT_DATE,
 	2,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B82448/batom_red_velvet.jpg'
+	'/batom.webp'
 ),(
 	'Make B Nude',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -111,7 +111,7 @@ values(
 	200,
 	CURRENT_DATE,
 	2,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B82448/batom_red_velvet.jpg'
+	'/batom.webp'
 ),(
 	'Make B Rose Gold',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -119,7 +119,7 @@ values(
 	200,
 	CURRENT_DATE,
 	2,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B82448/batom_red_velvet.jpg'
+	'/batom.webp'
 ),(
 	'Nativa Spa',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -127,7 +127,7 @@ values(
 	200,
 	CURRENT_DATE,
 	3,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B48770/NSPA_COND_AMEI_300ml-B48770-Familia.jpg'
+	'/shampoo.webp'
 ),(
 	'Nativa Spa Ameixa',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -135,7 +135,7 @@ values(
 	200,
 	CURRENT_DATE,
 	3,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B48770/NSPA_COND_AMEI_300ml-B48770-Familia.jpg'
+	'/shampoo.webp'
 ),(
 	'Nativa Spa Orquidea',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -143,7 +143,7 @@ values(
 	200,
 	CURRENT_DATE,
 	3,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B48770/NSPA_COND_AMEI_300ml-B48770-Familia.jpg'
+	'/shampoo.webp'
 ),(
 	'Nativa Spa Limao',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -151,7 +151,7 @@ values(
 	200,
 	CURRENT_DATE,
 	3,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B48770/NSPA_COND_AMEI_300ml-B48770-Familia.jpg'
+	'/shampoo.webp'
 ),(
 	'Nativa Spa Maçã',
 	'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
@@ -159,5 +159,5 @@ values(
 	200,
 	CURRENT_DATE,
 	3,
-	'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B48770/NSPA_COND_AMEI_300ml-B48770-Familia.jpg'
+	'/shampoo.webp'
 )

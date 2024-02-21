@@ -12,7 +12,8 @@ export function CartProvider(props){
 
     useEffect(()=>{
         const tot = cartList.reduce( ( sum , cur ) => sum + Number(cur.produto.preco_produto)*cur.qtd_produto_pedido , 0)
-        setTotalCart(tot)
+        const rounded = +tot.toFixed(2)
+        setTotalCart(rounded)
 
         const itens = cartList.reduce( ( sum , cur ) => sum + Number(cur.qtd_produto_pedido) , 0)
         setTotalItens(itens)

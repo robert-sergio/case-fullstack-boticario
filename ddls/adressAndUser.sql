@@ -16,7 +16,7 @@ values(
 insert into public.cliente (email,username,senha,nome,cpf, telefone,data_nascimento, endereco_id)
 values(
 	'oi@oi.com',
-	'oi',
+	'Lorem Ipsum',
 	'abc123',
 	'oi',
 	'12345678910',

@@ -25,15 +25,15 @@ export default function Orderlist() {
         }
         getOrders()
         setChanged(false)
-    },[changed])
+    },[changed])    
 
-    async function handleCancel(){
+    async function handleCancel(pedido_id){
         const service = new OrderService()
         const {data} = await service.cancelOrder(pedido_id, token)
         setChanged(true)
     }
 
-    async function handleDelete(){
+    async function handleDelete(pedido_id){
         const service = new OrderService()
         const {data} = await service.deleteOrder(pedido_id, token)
         setChanged(true)
