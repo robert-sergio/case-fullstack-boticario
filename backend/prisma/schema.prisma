@@ -26,7 +26,8 @@ model cliente {
   cpf String @unique @db.VarChar(11)
   telefone String @db.VarChar(11)
   data_nascimento DateTime?
-  endereco endereco[]
+  endereco_id Int @unique
+  endereco endereco @relation(fields: [endereco_id], references: [endereco_id])
   pedidos pedido[]
 }
 
@@ -39,8 +40,7 @@ model endereco {
   numero String? @db.VarChar(10)
   complemento String? @db.VarChar(100)
   uf String? @db.VarChar(2)
-  cliente_id Int
-  clientes cliente @relation(fields: [cliente_id], references: [cliente_id])
+  clientes cliente[]
 }
 
 model produto {
